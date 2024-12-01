@@ -1,0 +1,25 @@
+-Computername aanpassen
+IP checken ( of DHCP werkt)
+DHCP statisch zetten in andere Windows Server
+
+15) Exit to command line (PowerShell)
+
+Install-WindowsFeature -Name AD-Domain-Services, DNS -IncludeManagementTools
+
+Copy paste dit stuk tegelijkertijd:
+
+Install-ADDSDomainController `
+    -Credential (ExamenServer\Administrator) `
+    -DomainName "ExamenServer.com" `
+    -Force:$true
+
+
+
+Geval dat het niet werkt
+Copy paste dit stuk tegelijkertijd:
+
+$credential = ExamenServer\Administrator
+Install-ADDSDomainController `
+  -Credential $credentals `
+  -DomainName "ExamenServer.com" `
+  -Force:$true
