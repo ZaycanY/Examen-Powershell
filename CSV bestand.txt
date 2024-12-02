@@ -1,0 +1,2 @@
+voornaam;achternaam;username;SecurityGroep;ou
+Willem de;Wever;W.d.Wever;sg_directie;OU=Directie,OU=Go4Stones,DC=Go4Stones,DC=org
