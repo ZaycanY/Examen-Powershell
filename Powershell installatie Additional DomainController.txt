@@ -8,18 +8,5 @@ Install-WindowsFeature -Name AD-Domain-Services, DNS -IncludeManagementTools
 
 Copy paste dit stuk tegelijkertijd:
 
-Install-ADDSDomainController `
-    -Credential (ExamenServer\Administrator) `
-    -DomainName "ExamenServer.com" `
-    -Force:$true
-
-
-
-Geval dat het niet werkt
-Copy paste dit stuk tegelijkertijd:
-
-$credential = ExamenServer\Administrator
-Install-ADDSDomainController `
-  -Credential $credentals `
-  -DomainName "ExamenServer.com" `
-  -Force:$true
+Install-ADDSDomainController -DomainName "ExamenServer.com"
+    -Credential (Get-Credential)
